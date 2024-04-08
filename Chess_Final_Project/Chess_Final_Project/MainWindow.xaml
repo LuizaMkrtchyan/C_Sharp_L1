@@ -1,0 +1,159 @@
+﻿<Window x:Class="Chess_Final_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chess_Final_Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="435" Width="412" MouseMove="WindowMouseMove">
+    <Grid>
+        <Grid Name="GridBoard">
+            <Image Name="MyBoard" Source="board.jpg" Stretch="Fill"/>
+            <!--Black Figures-->
+            <Image Name="BlackRook" Source="br.gif" Margin="0,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackKnight" Source="bn.gif" Margin="50,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackBishop" Source="bb.gif" Margin="100,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackKing" Source="bk.gif" Margin="150,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackQueen" Source="bq.gif" Margin="200,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackBishop2" Source="bb.gif" Margin="250,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackKnight2" Source="bn.gif" Margin="300,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackRook2" Source="br.gif" Margin="350,0,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+
+            <Image Name="BlackPawn8" Source="bp.gif" Margin="350,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackPawn7" Source="bp.gif" Margin="300,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackPawn6" Source="bp.gif" Margin="250,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackPawn5" Source="bp.gif" Margin="200,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackPawn4" Source="bp.gif" Margin="150,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackPawn3" Source="bp.gif" Margin="100,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackPawn2" Source="bp.gif" Margin="50,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+            <Image Name="BlackPawn1" Source="bp.gif" Margin="0,50,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand"/>
+
+            <!--White Figures-->
+            <Image Name="WhiteRook" Source="wr.gif" Margin="0,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteRookMouseDown" MouseUp="WhiteRookMouseUp"/>
+            <Image Name="WhiteKnight" Source="wn.gif" Margin="50,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteKnightMouseDown" MouseUp="WhiteKnightMouseUp"/>
+            <Image Name="WhiteBishop" Source="wb.gif" Margin="100,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteBishopMouseDown" MouseUp="WhiteBishopMouseUp"/>
+            <Image Name="WhiteKing" Source="wk.gif" Margin="200,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteKingMouseDown" MouseUp="WhiteKingMouseUp"/>
+            <Image Name="WhiteQueen" Source="wq.gif" Margin="150,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteQueenMouseDown" MouseUp="WhiteQueenMouseUp"/>
+            <Image Name="WhiteBishop2" Source="wb.gif" Margin="250,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteBishop2MouseDown" MouseUp="WhiteBishop2MouseUp"/>
+            <Image Name="WhiteKnight2" Source="wn.gif" Margin="300,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteKnight2MouseDown" MouseUp="WhiteKnight2MouseUp"/>
+            <Image Name="WhiteRook2" Source="wr.gif" Margin="350,350,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhiteRook2MouseDown" MouseUp="WhiteRook2MouseUp"/>
+
+            <Image Name="WhitePawn1" Source="wp.gif" Margin="350,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn1MouseDown" MouseUp="WhitePawn1MouseUp"/>
+            <Image Name="WhitePawn2" Source="wp.gif" Margin="300,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn2MouseDown" MouseUp="WhitePawn2MouseUp"/>
+            <Image Name="WhitePawn3" Source="wp.gif" Margin="250,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn3MouseDown" MouseUp="WhitePawn3MouseUp"/>
+            <Image Name="WhitePawn4" Source="wp.gif" Margin="200,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn4MouseDown" MouseUp="WhitePawn4MouseUp"/>
+            <Image Name="WhitePawn5" Source="wp.gif" Margin="150,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn5MouseDown" MouseUp="WhitePawn5MouseUp"/>
+            <Image Name="WhitePawn6" Source="wp.gif" Margin="100,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn6MouseDown" MouseUp="WhitePawn6MouseUp"/>
+            <Image Name="WhitePawn7" Source="wp.gif" Margin="50,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn7MouseDown" MouseUp="WhitePawn7MouseUp"/>
+            <Image Name="WhitePawn8" Source="wp.gif" Margin="0,300,0,0" VerticalAlignment="Top"
+ HorizontalAlignment="Left" Width="50" Height="50" Cursor="Hand" MouseDown="WhitePawn8MouseDown" MouseUp="WhitePawn8MouseUp"/>
+
+
+
+
+            <Grid Name="ramka"></Grid>
+            <Rectangle Name="R00" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,0,0,0"  VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R01" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,0,0,0"  VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R02" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,0,0,0"  VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R03" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,0,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R04" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,0,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R05" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,0,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R06" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,0,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R07" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,0,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+
+            <Rectangle Name="R10" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,50,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R11" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,50,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R12" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,50,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R13" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,50,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R14" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,50,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R15" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,50,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R16" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,50,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R17" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,50,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden" />
+
+            <Rectangle Name="R20" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,100,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R21" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,100,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R22" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,100,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R23" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,100,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden" />
+            <Rectangle Name="R24" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,100,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R25" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,100,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R26" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,100,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R27" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,100,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+
+            <Rectangle Name="R30" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,150,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R31" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,150,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R32" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,150,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden" />
+            <Rectangle Name="R33" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,150,0,0" VerticalAlignment="Top" Width="50"  Visibility="Hidden"/>
+            <Rectangle Name="R34" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,150,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R35" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,150,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R36" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,150,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R37" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,150,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+
+            <Rectangle Name="R40" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R41" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R42" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R43" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R44" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R45" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R46" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R47" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,200,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+
+            <Rectangle Name="R50" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R51" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R52" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R53" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R54" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R55" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R56" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R57" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,250,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+
+            <Rectangle Name="R60" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R61" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R62" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R63" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R64" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R65" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R66" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R67" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,300,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+
+            <Rectangle Name="R70" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="0,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden" />
+            <Rectangle Name="R71" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="50,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R72" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="100,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R73" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="150,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R74" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="200,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R75" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="250,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R76" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="300,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+            <Rectangle Name="R77" Fill="#80008000" HorizontalAlignment="Left" Height="50" Margin="350,350,0,0" VerticalAlignment="Top" Width="50" Visibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Window>
